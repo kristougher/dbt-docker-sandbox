@@ -1,0 +1,13 @@
+jaffle_shop: # this needs to match the profile in your dbt_project.yml file
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      keyfile: /root/.dbt/dbt-test.json # /root/.dbt/ is mapped to .settings/ call your file what you want, btu put it there.
+      project: dbt-tutorial-427613 # Replace this with your GCP project id
+      dataset: dbt_target # Replace this with your BigQuery dataset name where you want to store the results
+      threads: 1
+      timeout_seconds: 300
+      location: US # The examples int the tutorial are based on US data and only available there.
+      priority: interactive

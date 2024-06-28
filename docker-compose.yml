@@ -1,0 +1,9 @@
+version: '3.9'
+services:
+  dbt-bq:
+    image: dbt-bigquery:latest
+    platform: linux/amd64
+    network_mode: host
+    volumes:
+      - ./:/usr/app
+      - .settings/:/root/.dbt/
