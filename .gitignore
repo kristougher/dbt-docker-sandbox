@@ -4,3 +4,4 @@ dbt_packages/
 logs/
 .settings/*.json
 .settings/profiles.yml
+.settings/.user.yml
