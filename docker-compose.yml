@@ -1,7 +1,7 @@
 version: '3.9'
 services:
   dbt-bq:
-    image: dbt-bigquery:latest
+    image: ghcr.io/dbt-labs/dbt-bigquery:latest
     platform: linux/amd64
     network_mode: host
     volumes:
